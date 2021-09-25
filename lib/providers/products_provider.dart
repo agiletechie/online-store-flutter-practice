@@ -6,7 +6,9 @@ class ProductsProvider with ChangeNotifier {
     Product(
         id: 'p1',
         title: 'A Black Shirt',
-        description: 'Branded Shirt',
+        description: 'The unnamed constructor on '
+            'List creates a new list with the given'
+            ' size but does not initialize any of the elements.',
         price: 300.0,
         imageUrl: 'https://images.unsplash.com/'
             'photo-1583743814966-8936f5b7be1a?'
@@ -46,6 +48,10 @@ class ProductsProvider with ChangeNotifier {
 
   List<Product> get products {
     return [..._products];
+  }
+
+  List<Product> get showFavProductsOnly {
+    return _products.where((prod) => prod.isFavourite).toList();
   }
 
   Product findById(String id) {

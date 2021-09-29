@@ -34,6 +34,4 @@ class Orders with ChangeNotifier {
     );
     notifyListeners();
   }
-
-  void clearOrder() {}
 }

@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'cart_screen.dart';
 import '../widgets/products_gridview.dart';
 import '../widgets/badge.dart';
+import '../widgets/app_drawer.dart';
 
 enum Filter {
   favourites,
@@ -65,6 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
+      drawer: const AppDrawer(),
       body: ProductsGridView(showFavOnly: _showOnlyFavourites),
     );
   }
